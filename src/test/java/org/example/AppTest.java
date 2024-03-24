@@ -23,6 +23,7 @@ public class AppTest
 {
     private Service service;
 
+
     public AppTest( String testName )
     {
         super( testName );
@@ -36,6 +37,11 @@ public class AppTest
 
         this.service = new Service(fileRepository1, fileRepository2, fileRepository3);
 
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( AppTest.class );
     }
 
     public void testCase1() {
